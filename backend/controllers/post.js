@@ -11,3 +11,13 @@ export const createPost = async (req, res) => {
     res.status(409).json({ message: error.message });
   }
 };
+
+//fetch flashcards from database
+export const getPosts = async (req, res) => {
+  try {
+    const postMessages = await flashcard.find();
+    res.status(200).json(postMessages);
+  } catch (error) {
+    res.status(404).json({ message: error.message });
+  }
+};
