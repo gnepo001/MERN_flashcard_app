@@ -1,11 +1,15 @@
 import React from "react";
 import { Typography, Card, CardContent } from "@mui/material";
 
-const Flashcard = () => {
+import useStyles from "./styles.js";
+
+const Flashcard = ({ item }) => {
+  const classes = useStyles();
   return (
-    <Card>
+    <Card className={classes.Flashcard}>
       <CardContent>
-        <Typography>Flash Card</Typography>
+        <Typography>{item.word}</Typography>
+        <Typography>{item.definition}</Typography>
       </CardContent>
     </Card>
   );

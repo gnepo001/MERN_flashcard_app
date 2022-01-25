@@ -4,6 +4,8 @@ const data = (posts = [], action) => {
       return [...posts, action.payload];
     default:
       return posts;
+    case "FETCH_ALL":
+      return action.payload;
   }
 };
 
