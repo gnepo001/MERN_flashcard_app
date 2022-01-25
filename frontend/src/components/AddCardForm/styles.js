@@ -11,7 +11,8 @@ export default makeStyles((theme) => ({
   },
   paper: {
     margin: "auto",
-    width: "50%",
+    width: "40%",
+    backgroundColor: "red",
   },
   title: {
     margin: "auto",
