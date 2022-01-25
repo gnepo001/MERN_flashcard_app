@@ -21,3 +21,4 @@ Deploy a quizlet inspired application with matching games.
 - react thunk, react redux
 - axios
 - nodemon
+- dotenv

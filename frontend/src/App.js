@@ -1,11 +1,14 @@
 import React from "react";
-import { AddCardForm } from "./components/index.js";
+import { AddCardForm, Navbar, Flashcards } from "./components/index.js";
+
+import "./background.css";
 
 const App = () => {
   return (
     <div>
-      <h1>test</h1>
+      <Navbar />
       <AddCardForm />
+      <Flashcards />
     </div>
   );
 };
