@@ -1,12 +1,18 @@
 import React from "react";
-import { AppBar, Typography } from "@mui/material";
+import { Button, AppBar, Toolbar, Typography } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
 import useStyles from "./styles.js";
 
 const Navbar = () => {
   const classes = useStyles();
   return (
     <AppBar>
-      <Typography className={classes.logo}>Quiz App</Typography>
+      <Toolbar>
+        <Typography className={classes.logo}>Flash Card App</Typography>
+        <Button color="inherit">
+          <AddIcon className={classes.button} />
+        </Button>
+      </Toolbar>
     </AppBar>
   );
 };

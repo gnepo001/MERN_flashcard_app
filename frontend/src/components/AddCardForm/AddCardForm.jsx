@@ -25,7 +25,7 @@ const AddCardForm = () => {
           onSubmit={handleSubmit}
         >
           <Typography variant="h5" className={classes.title}>
-            Add a New Card!
+            Make a new Card!
           </Typography>
 
           <Box className={classes.input}>

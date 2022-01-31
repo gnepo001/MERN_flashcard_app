@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/styles";
 
 export default makeStyles((theme) => ({
   form: {
-    marginTop: "60px",
+    marginTop: "80px",
     display: "flex",
     flexDirection: "column",
     textAlign: "center",

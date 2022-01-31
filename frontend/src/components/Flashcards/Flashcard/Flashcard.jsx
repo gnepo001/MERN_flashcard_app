@@ -7,7 +7,7 @@ const Flashcard = ({ item }) => {
   const classes = useStyles();
   return (
     <Card className={classes.Flashcard}>
-      <CardContent>
+      <CardContent className={classes.CardContent}>
         <Typography>{item.word}</Typography>
         <Typography>{item.definition}</Typography>
       </CardContent>
