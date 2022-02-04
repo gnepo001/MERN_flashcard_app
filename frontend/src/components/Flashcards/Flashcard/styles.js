@@ -6,7 +6,4 @@ export default makeStyles((theme) => ({
     maxWidth: "50%",
     margin: "auto",
   },
-  CardContent: {
-    margin: "auto",
-  },
 }));
