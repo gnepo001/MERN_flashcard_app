@@ -9,4 +9,15 @@ export default makeStyles((theme) => ({
   logo: {
     flexGrow: "1",
   },
+  options: {
+    display: "flex",
+    alignItems: "center",
+  },
+  app__navbar_links: {
+    textDecoration: "none",
+    color: "white",
+    "&:hover": {
+      color: "yellow",
+    },
+  },
 }));

@@ -9,9 +9,14 @@ const Navbar = () => {
     <AppBar>
       <Toolbar>
         <Typography className={classes.logo}>Flash Card App</Typography>
-        <Button color="inherit">
-          <AddIcon className={classes.button} />
-        </Button>
+        <div className={classes.options}>
+          <a href="#" className={classes.app__navbar_links}>
+            <Typography>Practice</Typography>
+          </a>
+          <Button color="inherit">
+            <AddIcon className={classes.button} />
+          </Button>
+        </div>
       </Toolbar>
     </AppBar>
   );

@@ -1,5 +1,10 @@
 import React, { useEffect } from "react";
-import { AddCardForm, Navbar, Flashcards } from "./components/index.js";
+import {
+  AddCardForm,
+  Navbar,
+  Flashcards,
+  FlippableFlashcards,
+} from "./components/index.js";
 import { useDispatch } from "react-redux";
 import { getPosts } from "./actions/post.js";
 
@@ -16,6 +21,7 @@ const App = () => {
       <Navbar />
       <AddCardForm />
       <Flashcards />
+      <FlippableFlashcards />
     </div>
   );
 };
