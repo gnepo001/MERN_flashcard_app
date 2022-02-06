@@ -1,8 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
+import { Card, CardContent, Typography, Button } from "@mui/material";
+import useStyles from "./styles.js";
 
-const FlippableCard = () => {
-  const flipped = true;
-  return flipped ? <div>front</div> : <div>back</div>;
+const FlippableCard = ({ item }) => {
+  const classes = useStyles();
+
+  const [flipped, setFlipped] = useState({
+    status: true,
+  });
+
+  return flipped.status ? (
+    <div className={classes.Loading}>
+      <Button onClick={() => setFlipped({ ...flipped, status: false })}>
+        <Card>
+          <CardContent>
+            <Typography>{item.word}</Typography>
+          </CardContent>
+        </Card>
+      </Button>
+    </div>
+  ) : (
+    <div className={classes.Loading}>
+      <Button onClick={() => setFlipped({ ...flipped, status: true })}>
+        <Card>
+          <CardContent>
+            <Typography>{item.definition}</Typography>
+          </CardContent>
+        </Card>
+      </Button>
+    </div>
+  );
 };
 
 export default FlippableCard;

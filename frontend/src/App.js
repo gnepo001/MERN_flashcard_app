@@ -20,7 +20,7 @@ const App = () => {
     <div>
       <Navbar />
       <AddCardForm />
-      <Flashcards />
+      {/*<Flashcards />*/}
       <FlippableFlashcards />
     </div>
   );
