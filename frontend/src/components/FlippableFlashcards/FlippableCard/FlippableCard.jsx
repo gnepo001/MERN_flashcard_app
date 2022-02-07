@@ -13,7 +13,7 @@ const FlippableCard = ({ item }) => {
     <div className={classes.Loading}>
       <Button onClick={() => setFlipped({ ...flipped, status: false })}>
         <Card>
-          <CardContent>
+          <CardContent className={classes.Front}>
             <Typography>{item.word}</Typography>
           </CardContent>
         </Card>
@@ -23,7 +23,7 @@ const FlippableCard = ({ item }) => {
     <div className={classes.Loading}>
       <Button onClick={() => setFlipped({ ...flipped, status: true })}>
         <Card>
-          <CardContent>
+          <CardContent className={classes.Back}>
             <Typography>{item.definition}</Typography>
           </CardContent>
         </Card>
