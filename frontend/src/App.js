@@ -8,7 +8,7 @@ import {
 import { useDispatch } from "react-redux";
 import { getPosts } from "./actions/post.js";
 
-import "./background.css";
+import "./App.css";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -19,8 +19,9 @@ const App = () => {
   return (
     <div>
       <Navbar />
+
       <AddCardForm />
-      {/*<Flashcards />*/}
+      <Flashcards />
       <FlippableFlashcards />
     </div>
   );

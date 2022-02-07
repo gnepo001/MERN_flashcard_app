@@ -9,5 +9,9 @@ export default makeStyles((theme) => ({
   },
   FlashcardContainer: {
     marginTop: "25px",
+    ["@media (max-width:500px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      display: "none",
+    },
   },
 }));

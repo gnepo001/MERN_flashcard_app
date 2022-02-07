@@ -2,7 +2,6 @@ import { makeStyles } from "@material-ui/styles";
 
 export default makeStyles((theme) => ({
   form: {
-    marginTop: "80px",
     display: "flex",
     flexDirection: "column",
     textAlign: "center",
@@ -12,7 +11,10 @@ export default makeStyles((theme) => ({
   paper: {
     margin: "auto",
     width: "40%",
-    backgroundColor: "red",
+    ["@media (max-width:500px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      display: "none",
+    },
   },
   title: {
     margin: "auto",
