@@ -11,8 +11,7 @@ export default makeStyles((theme) => ({
   paper: {
     margin: "auto",
     width: "40%",
-    ["@media (max-width:500px)"]: {
-      // eslint-disable-line no-useless-computed-key
+    "@media (max-width:500px)": {
       display: "none",
     },
   },

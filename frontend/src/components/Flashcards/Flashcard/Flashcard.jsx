@@ -7,6 +7,7 @@ import useStyles from "./styles.js";
 
 const Flashcard = ({ item }) => {
   const classes = useStyles();
+
   return (
     <Card className={classes.Flashcard}>
       <CardContent>

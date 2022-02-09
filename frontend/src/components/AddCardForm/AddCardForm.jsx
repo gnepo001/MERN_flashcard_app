@@ -6,16 +6,20 @@ import useStyles from "./styles.js";
 import { createPost } from "../../actions/post.js";
 
 const AddCardForm = () => {
+  const dispatch = useDispatch();
+  const classes = useStyles();
+
   const [postData, setPostData] = useState({
     word: "",
     definition: "",
   });
-  const dispatch = useDispatch();
-  const classes = useStyles();
+
+  //setting data to send to backend
   const handleSubmit = (e) => {
     dispatch(createPost(postData));
     console.log(postData.word);
   };
+
   return (
     <>
       <Paper elevation={1} className={classes.paper}>
