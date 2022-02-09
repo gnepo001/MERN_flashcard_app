@@ -10,7 +10,7 @@ export default makeStyles((theme) => ({
   },
   paper: {
     margin: "auto",
-    width: "40%",
+    width: "100%",
     "@media (max-width:500px)": {
       display: "none",
     },

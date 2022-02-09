@@ -23,12 +23,14 @@ export default makeStyles((theme) => ({
       display: "none",
     },
   },
-
   app__navbar_links: {
     textDecoration: "none",
     color: "white",
     "&:hover": {
       color: "yellow",
     },
+  },
+  app__navbar_popover: {
+    marginTop: "20px",
   },
 }));
