@@ -12,7 +12,18 @@ export default makeStyles((theme) => ({
   options: {
     display: "flex",
     alignItems: "center",
+    ["@media (max-width:499px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      display: "none",
+    },
   },
+  menu: {
+    ["@media (min-width:499px)"]: {
+      // eslint-disable-line no-useless-computed-key
+      display: "none",
+    },
+  },
+
   app__navbar_links: {
     textDecoration: "none",
     color: "white",

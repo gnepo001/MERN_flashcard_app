@@ -3,6 +3,9 @@ import { Button, AppBar, Toolbar, Typography } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import useStyles from "./styles.js";
 
+import MenuIcon from "@mui/icons-material/Menu";
+import SettingsIcon from "@mui/icons-material/Settings";
+
 const Navbar = () => {
   const classes = useStyles();
   return (
@@ -14,7 +17,15 @@ const Navbar = () => {
             <Typography>Practice</Typography>
           </a>
           <Button color="inherit">
-            <AddIcon className={classes.button} />
+            <AddIcon />
+          </Button>
+          <Button color="inherit">
+            <SettingsIcon />
+          </Button>
+        </div>
+        <div className={classes.menu}>
+          <Button color="inherit">
+            <MenuIcon />
           </Button>
         </div>
       </Toolbar>
