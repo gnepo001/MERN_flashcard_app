@@ -3,10 +3,17 @@
 Mern application for creating flashcards for studying.
 Deploy a quizlet inspired application with matching games.
 
+### Capablities
+
+- Flippable Cards
+- Responsive Function
+
 ### Future updates
 
 - matching game
-- Flip function
+- ~~Flippable function~~
+- ~~responsive function~~
+- Multiple sets
 
 # App Stack
 
