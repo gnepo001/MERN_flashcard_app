@@ -6,4 +6,7 @@ export default makeStyles((theme) => ({
     margin: "auto",
     textAlign: "center",
   },
+  Card: {
+    width: "100%",
+  },
 }));

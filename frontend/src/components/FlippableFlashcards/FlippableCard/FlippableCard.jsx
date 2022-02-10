@@ -11,9 +11,12 @@ const FlippableCard = ({ item }) => {
 
   return flipped.status ? (
     <div className={classes.Loading}>
-      <Button onClick={() => setFlipped({ ...flipped, status: false })}>
-        <Card>
-          <CardContent className={classes.Front}>
+      <Button
+        onClick={() => setFlipped({ ...flipped, status: false })}
+        className={classes.Card}
+      >
+        <Card className={classes.Card}>
+          <CardContent>
             <Typography>{item.word}</Typography>
           </CardContent>
         </Card>
@@ -21,9 +24,12 @@ const FlippableCard = ({ item }) => {
     </div>
   ) : (
     <div className={classes.Loading}>
-      <Button onClick={() => setFlipped({ ...flipped, status: true })}>
-        <Card>
-          <CardContent className={classes.Back}>
+      <Button
+        onClick={() => setFlipped({ ...flipped, status: true })}
+        className={classes.Card}
+      >
+        <Card className={classes.Card}>
+          <CardContent>
             <Typography>{item.definition}</Typography>
           </CardContent>
         </Card>
