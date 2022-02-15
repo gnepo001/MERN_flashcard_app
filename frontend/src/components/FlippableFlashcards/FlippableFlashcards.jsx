@@ -1,7 +1,7 @@
 import React from "react";
 import FlippableCard from "./FlippableCard/FlippableCard";
 
-import { Paper, Typography, Button } from "@mui/material";
+import { Button } from "@mui/material";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
 
@@ -16,7 +16,7 @@ const FlippableFlashcards = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.flippableCards}>
+    <div className={classes.flippableCards_cards}>
       {items.map((item) => (
         <FlippableCard key={item._id} item={item} />
       ))}

@@ -9,7 +9,7 @@ const Flashcard = ({ item }) => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.Flashcard}>
+    <Card className={classes.flashcard_card}>
       <CardContent>
         <Grid container spacing={2} sx={{ justifyContent: "space-between" }}>
           <Grid item>
@@ -18,10 +18,10 @@ const Flashcard = ({ item }) => {
           </Grid>
           <Grid item>
             <Button>
-              <CreateIcon className={classes.button} />
+              <CreateIcon className={classes.flashcard_button} />
             </Button>
             <Button>
-              <DeleteOutlineIcon className={classes.button} />
+              <DeleteOutlineIcon className={classes.flashcard_button} />
             </Button>
           </Grid>
         </Grid>

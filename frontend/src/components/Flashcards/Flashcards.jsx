@@ -13,11 +13,11 @@ const Flashcards = () => {
 
   //returns loading cirlce if no flashcards are read in (ie: empty database)
   return !items.length ? (
-    <div className={classes.Loading}>
+    <div className={classes.flashcards_Loading}>
       <CircularProgress />
     </div>
   ) : (
-    <div className={classes.FlashcardContainer}>
+    <div className={classes.flashcards_FlashcardContainer}>
       {items.map((item) => (
         <Flashcard key={item._id} item={item} />
       ))}

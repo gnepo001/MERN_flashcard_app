@@ -22,17 +22,17 @@ const AddCardForm = () => {
 
   return (
     <>
-      <Paper elevation={1} className={classes.paper}>
+      <Paper elevation={1} className={classes.addForm_paper}>
         <form
           autoComplete="off"
-          className={classes.form}
+          className={classes.addForm_form}
           onSubmit={handleSubmit}
         >
-          <Typography variant="h5" className={classes.title}>
+          <Typography variant="h5" className={classes.from_title}>
             Make a new Card!
           </Typography>
 
-          <Box className={classes.input}>
+          <Box className={classes.addForm_input}>
             <TextField
               id="newWord"
               label="New Term"
@@ -50,7 +50,7 @@ const AddCardForm = () => {
               }
             />
           </Box>
-          <Box className={classes.buttons}>
+          <Box className={classes.addForm_buttons}>
             <Button variant="contained" color="secondary">
               Clear
             </Button>

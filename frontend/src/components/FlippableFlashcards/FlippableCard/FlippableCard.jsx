@@ -13,9 +13,9 @@ const FlippableCard = ({ item }) => {
     <div className={classes.Loading}>
       <Button
         onClick={() => setFlipped({ ...flipped, status: false })}
-        className={classes.Card}
+        className={classes.flippableCard_card}
       >
-        <Card className={classes.Card}>
+        <Card className={classes.flippableCard_card}>
           <CardContent>
             <Typography>{item.word}</Typography>
           </CardContent>
@@ -23,12 +23,12 @@ const FlippableCard = ({ item }) => {
       </Button>
     </div>
   ) : (
-    <div className={classes.Loading}>
+    <div className={classes.flippableCard_loading}>
       <Button
         onClick={() => setFlipped({ ...flipped, status: true })}
-        className={classes.Card}
+        className={classes.flippableCard_card}
       >
-        <Card className={classes.Card}>
+        <Card className={classes.flippableCard_card}>
           <CardContent>
             <Typography>{item.definition}</Typography>
           </CardContent>

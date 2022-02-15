@@ -1,12 +1,12 @@
 import { makeStyles } from "@material-ui/styles";
 
 export default makeStyles((theme) => ({
-  Flashcard: {
+  flashcard_card: {
     marginTop: "10px",
     maxWidth: "50%",
     margin: "auto",
   },
-  button: {
+  flashcard_button: {
     color: "black",
   },
 }));

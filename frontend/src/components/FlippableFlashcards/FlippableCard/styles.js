@@ -1,12 +1,12 @@
 import { makeStyles } from "@material-ui/styles";
 
 export default makeStyles((theme) => ({
-  Loading: {
+  flippableCard_loading: {
     marginTop: "10px",
     margin: "auto",
     textAlign: "center",
   },
-  Card: {
+  flippableCard_card: {
     width: "100%",
   },
 }));

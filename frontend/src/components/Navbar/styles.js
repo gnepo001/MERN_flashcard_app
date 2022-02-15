@@ -6,10 +6,10 @@ export default makeStyles((theme) => ({
     flexDirection: "row",
     justifyContent: "center",
   },
-  logo: {
+  navbar_logo: {
     flexGrow: "1",
   },
-  options: {
+  navbar_options: {
     display: "flex",
     alignItems: "center",
     "@media (max-width:499px)": {
@@ -17,29 +17,29 @@ export default makeStyles((theme) => ({
       display: "none",
     },
   },
-  menu: {
+  navbar_menu: {
     "@media (min-width:499px)": {
       // eslint-disable-line no-useless-computed-key
       display: "none",
     },
   },
-  app__navbar_links: {
+  app__navbarnavbar_links: {
     textDecoration: "none",
     color: "white",
     "&:hover": {
       color: "yellow",
     },
   },
-  app__navbar_popover: {
+  navbar_popover: {
     marginTop: "20px",
   },
 
-  smallscreen_button: {
+  navbar_smallscreen_button: {
     margin: "16px 10px 10px 323px",
     color: "black",
   },
 
-  app__navbar_smallscreen_overlay: {
+  navbar_smallscreen_overlay: {
     position: "fixed",
     top: "0",
     left: "0",
@@ -50,7 +50,7 @@ export default makeStyles((theme) => ({
     flexDirection: "column",
   },
 
-  smallscreen_links: {
+  navbar_smallscreen_links: {
     listStyle: "none",
     margin: "2rem",
     cursor: "pointer",

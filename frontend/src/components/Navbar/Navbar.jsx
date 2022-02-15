@@ -27,9 +27,9 @@ const Navbar = () => {
   return (
     <AppBar>
       <Toolbar>
-        <Typography className={classes.logo}>Flash Card App</Typography>
-        <div className={classes.options}>
-          <a className={classes.app__navbar_links}>
+        <Typography className={classes.navbar_logo}>Flash Card App</Typography>
+        <div className={classes.navbar_options}>
+          <a className={classes.navbar_links}>
             <Typography>Practice</Typography>
           </a>
           <Button color="inherit" aria-describedby={id} onClick={handleClick}>
@@ -44,7 +44,7 @@ const Navbar = () => {
               vertical: "bottom",
               horizontal: "right",
             }}
-            className={classes.app__navbar_popover}
+            className={classes.navbar_popover}
           >
             <AddCardForm />
           </Popover>
@@ -52,17 +52,17 @@ const Navbar = () => {
             <SettingsIcon />
           </Button>
         </div>
-        <div className={classes.menu}>
+        <div className={classes.navbar_menu}>
           <Button color="inherit">
             <MenuIcon onClick={() => setToggleMenu(true)} />
           </Button>
           {toggleMenu && (
-            <div className={classes.app__navbar_smallscreen_overlay}>
+            <div className={classes.navbar_smallscreen_overlay}>
               <MenuIcon
-                className={classes.smallscreen_button}
+                className={classes.navbar_smallscreen_button}
                 onClick={() => setToggleMenu(false)}
               />
-              <ul className={classes.smallscreen_links}>
+              <ul className={classes.navbar_smallscreen_links}>
                 <li>
                   <a>Add</a>
                 </li>
