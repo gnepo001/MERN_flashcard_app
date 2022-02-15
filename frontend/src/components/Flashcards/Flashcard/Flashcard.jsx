@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Card, CardContent, Grid } from "@mui/material";
+import { Typography, Card, CardContent, Grid, Button } from "@mui/material";
 import CreateIcon from "@mui/icons-material/Create";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 
@@ -17,8 +17,12 @@ const Flashcard = ({ item }) => {
             <Typography>{item.definition}</Typography>
           </Grid>
           <Grid item>
-            <CreateIcon />
-            <DeleteOutlineIcon />
+            <Button>
+              <CreateIcon className={classes.button} />
+            </Button>
+            <Button>
+              <DeleteOutlineIcon className={classes.button} />
+            </Button>
           </Grid>
         </Grid>
       </CardContent>

@@ -6,4 +6,7 @@ export default makeStyles((theme) => ({
     maxWidth: "50%",
     margin: "auto",
   },
+  button: {
+    color: "black",
+  },
 }));
