@@ -1,3 +1,4 @@
+import mongoose from "mongoose";
 import flashcard from "../models/flashcard.js";
 
 //write new Flashcard to database
@@ -20,4 +21,13 @@ export const getPosts = async (req, res) => {
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
+};
+
+export const deletePost = async (req, res) => {
+  const { id: _id } = req.params;
+  if (!mongoose.Types.ObjectId.isValid(_id))
+    return res.status(404).send("No Post with that ID");
+  await postMessage.findByIdandRemove(_id);
+
+  res.json({ message: "Post deleted successfully" });
 };
