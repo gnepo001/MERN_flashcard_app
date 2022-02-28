@@ -6,6 +6,8 @@ const data = (posts = [], action) => {
       return posts;
     case "FETCH_ALL":
       return action.payload;
+    case "DELETE":
+      return posts.filter((post) => post._id !== action.payload);
   }
 };
 
