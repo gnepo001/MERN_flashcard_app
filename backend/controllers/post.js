@@ -25,9 +25,10 @@ export const getPosts = async (req, res) => {
 
 export const deletePost = async (req, res) => {
   const { id: _id } = req.params;
-  if (!mongoose.Types.ObjectId.isValid(_id))
-    return res.status(404).send("No Post with that ID");
-  await postMessage.findByIdandRemove(_id);
+  if (!mongoose.Types.ObjectId.isValid(_id)) {
+    return res.status(404).send("No post with that id");
+  }
 
+  await flashcard.findByIdAndRemove(_id);
   res.json({ message: "Post deleted successfully" });
 };
