@@ -1,10 +1,6 @@
 import React, { useEffect } from "react";
-import {
-  AddCardForm,
-  Navbar,
-  Flashcards,
-  FlippableFlashcards,
-} from "./components/index.js";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Navbar, Flashcards, FlippableFlashcards } from "./components/index.js";
 import { useDispatch } from "react-redux";
 import { getPosts } from "./actions/post.js";
 
@@ -17,13 +13,20 @@ const App = () => {
   });
 
   return (
-    <div>
+    <BrowserRouter>
       <Navbar />
-
-      {/*<AddCardForm />*/}
-      <Flashcards />
-      <FlippableFlashcards />
-    </div>
+      <Routes>
+        <Route
+          path="/"
+          exact
+          element={
+            <>
+              <Flashcards /> <FlippableFlashcards />
+            </>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
