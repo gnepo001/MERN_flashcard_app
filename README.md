@@ -25,7 +25,7 @@ Deploy a quizlet inspired application with matching games.
 #### other packages
 
 - Material UI
-- react thunk, react redux
+- react thunk, react redux, BrowserRouter
 - axios
 - nodemon
 - dotenv
