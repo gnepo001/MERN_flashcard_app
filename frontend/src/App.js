@@ -1,6 +1,11 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Navbar, Flashcards, FlippableFlashcards } from "./components/index.js";
+import {
+  Navbar,
+  Flashcards,
+  FlippableFlashcards,
+  Practice,
+} from "./components/index.js";
 import { useDispatch } from "react-redux";
 import { getPosts } from "./actions/post.js";
 
@@ -25,6 +30,7 @@ const App = () => {
             </>
           }
         />
+        <Route path="/practice" exact element={<Practice />} />
       </Routes>
     </BrowserRouter>
   );

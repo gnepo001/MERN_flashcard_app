@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Popover, Button, AppBar, Toolbar, Typography } from "@mui/material";
+import { Popover, Button, AppBar, Toolbar } from "@mui/material";
+import { Link } from "react-router-dom";
 import AddIcon from "@mui/icons-material/Add";
 import useStyles from "./styles.js";
 
@@ -27,11 +28,20 @@ const Navbar = () => {
   return (
     <AppBar>
       <Toolbar>
-        <Typography className={classes.navbar_logo}>Flash Card App</Typography>
+        <div className={classes.navbar_logo}>
+          <Button color="inherit" component={Link} to="/">
+            Flash Card App
+          </Button>
+        </div>
         <div className={classes.navbar_options}>
-          <a className={classes.navbar_links}>
-            <Typography>Practice</Typography>
-          </a>
+          <Button
+            component={Link}
+            to="/practice"
+            variant="none"
+            color="primary"
+          >
+            Practice
+          </Button>
           <Button color="inherit" aria-describedby={id} onClick={handleClick}>
             <AddIcon />
           </Button>
@@ -64,16 +74,16 @@ const Navbar = () => {
               />
               <ul className={classes.navbar_smallscreen_links}>
                 <li>
-                  <a>Add</a>
+                  <Button>Add</Button>
                 </li>
                 <li>
-                  <a>Practice</a>
+                  <Button>Practice</Button>
                 </li>
                 <li>
-                  <a>Account</a>
+                  <Button>Account</Button>
                 </li>
                 <li>
-                  <a>About</a>
+                  <Button>About</Button>
                 </li>
               </ul>
             </div>
