@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/styles";
 
 export default makeStyles((theme) => ({
-  flippableCard_loading: {
+  card: {
     marginTop: "10px",
     margin: "auto",
     textAlign: "center",

@@ -10,7 +10,7 @@ const FlippableCard = ({ item }) => {
   });
 
   return flipped.status ? (
-    <div className={classes.Loading}>
+    <div className={classes.card}>
       <Button
         onClick={() => setFlipped({ ...flipped, status: false })}
         className={classes.flippableCard_card}
@@ -23,7 +23,7 @@ const FlippableCard = ({ item }) => {
       </Button>
     </div>
   ) : (
-    <div className={classes.flippableCard_loading}>
+    <div className={classes.card}>
       <Button
         onClick={() => setFlipped({ ...flipped, status: true })}
         className={classes.flippableCard_card}

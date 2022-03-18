@@ -15,11 +15,11 @@ const Flashcard = ({ item }) => {
     <Card className={classes.flashcard_card}>
       <CardContent>
         <Grid container spacing={2} sx={{ justifyContent: "space-between" }}>
-          <Grid item>
+          <Grid item xs={10}>
             <Typography>{item.word}</Typography>
             <Typography>{item.definition}</Typography>
           </Grid>
-          <Grid item>
+          <Grid item xs={2}>
             <Button>
               <CreateIcon className={classes.flashcard_button} />
             </Button>

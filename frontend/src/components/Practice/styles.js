@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/styles";
 
 export default makeStyles((theme) => ({
   centerDiv: {
-    padding: "200px",
+    paddingTop: "20%",
   },
   ButtonBar: {
     margin: "auto",
