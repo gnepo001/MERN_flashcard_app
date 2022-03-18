@@ -3,12 +3,22 @@
 Mern application for creating flashcards for studying.
 Deploy a quizlet inspired application with matching games.
 
-### Capablities
+### Desktop Mode
+
+![Desktop](./github_images/desktop.png)
+
+### Mobile Responsive
+
+![Mobile](./github_images/mobile.png)
+
+<figcaption ><b>Flashcards can be clicked to flip over to definition</b></figcaption>
+
+## Capablities
 
 - Flippable Cards
 - Responsive Function
 
-### Future updates
+## Future updates
 
 - matching game
 - ~~Flippable function~~
