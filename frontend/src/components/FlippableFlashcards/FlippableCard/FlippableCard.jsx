@@ -13,10 +13,11 @@ const FlippableCard = ({ item }) => {
     <div className={classes.card}>
       <Button
         onClick={() => setFlipped({ ...flipped, status: false })}
-        className={classes.flippableCard_card}
+        className={classes.button}
+        color="inherit"
       >
-        <Card className={classes.flippableCard_card}>
-          <CardContent>
+        <Card className={classes.flippableCard_card_front}>
+          <CardContent className={classes.flippableCard_card_front_color}>
             <Typography>{item.word}</Typography>
           </CardContent>
         </Card>
@@ -26,9 +27,9 @@ const FlippableCard = ({ item }) => {
     <div className={classes.card}>
       <Button
         onClick={() => setFlipped({ ...flipped, status: true })}
-        className={classes.flippableCard_card}
+        className={classes.button}
       >
-        <Card className={classes.flippableCard_card}>
+        <Card className={classes.flippableCard_card_back}>
           <CardContent>
             <Typography>{item.definition}</Typography>
           </CardContent>

@@ -20,16 +20,6 @@ const FlippableFlashcards = () => {
       {items.map((item) => (
         <FlippableCard key={item._id} item={item} />
       ))}
-
-      <div>
-        <Button>
-          <ArrowLeftIcon />
-        </Button>
-
-        <Button>
-          <ArrowRightIcon />
-        </Button>
-      </div>
     </div>
   );
 };
