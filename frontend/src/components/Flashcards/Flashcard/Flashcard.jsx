@@ -5,7 +5,7 @@ import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { useDispatch } from "react-redux";
 
 import useStyles from "./styles.js";
-import { deletePost } from "../../../actions/post.js";
+import { deletePost, updatePost } from "../../../actions/post.js";
 
 const Flashcard = ({ item }) => {
   const classes = useStyles();
@@ -20,7 +20,7 @@ const Flashcard = ({ item }) => {
             <Typography>{item.definition}</Typography>
           </Grid>
           <Grid item xs={2}>
-            <Button>
+            <Button onClick={() => dispatch(updatePost(item._id))}>
               <CreateIcon className={classes.flashcard_button} />
             </Button>
             <Button
