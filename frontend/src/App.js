@@ -5,6 +5,7 @@ import {
   Flashcards,
   FlippableFlashcards,
   Practice,
+  Match,
 } from "./components/index.js";
 import { useDispatch } from "react-redux";
 import { getPosts } from "./actions/post.js";
@@ -31,6 +32,7 @@ const App = () => {
           }
         />
         <Route path="/practice" exact element={<Practice />} />
+        <Route path="/matchingGame" exact element={<Match />} />
       </Routes>
     </BrowserRouter>
   );

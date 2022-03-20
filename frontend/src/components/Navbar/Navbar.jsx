@@ -42,6 +42,14 @@ const Navbar = () => {
           >
             Practice
           </Button>
+          <Button
+            component={Link}
+            to="/matchingGame"
+            variant="none"
+            color="primary"
+          >
+            Match
+          </Button>
           <Button color="inherit" aria-describedby={id} onClick={handleClick}>
             <AddIcon />
           </Button>
@@ -74,13 +82,25 @@ const Navbar = () => {
               />
               <ul className={classes.navbar_smallscreen_links}>
                 <li>
-                  <Button>Add</Button>
+                  <Button onClick={() => setToggleMenu(false)}>Add</Button>
                 </li>
                 <li>
-                  <Button>Practice</Button>
+                  <Button
+                    component={Link}
+                    to="/practice"
+                    onClick={() => setToggleMenu(false)}
+                  >
+                    Practice
+                  </Button>
                 </li>
                 <li>
-                  <Button>Account</Button>
+                  <Button
+                    component={Link}
+                    to="/matchingGame"
+                    onClick={() => setToggleMenu(false)}
+                  >
+                    Matching
+                  </Button>
                 </li>
                 <li>
                   <Button>About</Button>

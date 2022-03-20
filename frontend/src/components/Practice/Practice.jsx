@@ -17,13 +17,11 @@ const Practice = () => {
     if (cardIndex < items.length - 1) {
       setCardIndex((cardIndex) => cardIndex + 1);
     }
-    console.log(cardIndex);
   };
   const handleSub = () => {
     if (cardIndex > 0) {
       setCardIndex((cardIndex) => cardIndex - 1);
     }
-    console.log(cardIndex);
   };
 
   return (

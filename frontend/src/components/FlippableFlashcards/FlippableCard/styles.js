@@ -11,10 +11,9 @@ export default makeStyles((theme) => ({
   },
   flippableCard_card_front: {
     width: "100%",
-    backgroundColor: "#A4C3D2",
   },
   flippableCard_card_front_color: {
-    backgroundColor: "#cff0ff",
+    backgroundColor: "#f5f5f5",
   },
   flippableCard_card_back: {
     width: "100%",
