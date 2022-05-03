@@ -12,23 +12,12 @@ const Match = () => {
   let x = null;
   const wordArr = [];
   const randomArr = [];
-
-  const checkId = (id) => {
-    if (x) {
-      if (id === x) {
-        console.log("Match");
-      } else {
-        console.log("no match");
-      }
-      x = null;
-    } else {
-      x = id;
-    }
-  };
+  const newList = [];
 
   //need to split up items objs to two seprate arrs in order
   //to randomize defs for the matching game
   for (let i = 0; i < items.length; i++) {
+    newList.push(items[i]);
     wordArr.push({ _id: items[i]._id, definition: items[i].definition });
   }
   for (let i = 0; i < items.length; i++) {
@@ -37,6 +26,22 @@ const Match = () => {
     randomArr.push({ _id: temp2._id, definition: temp2.definition });
     wordArr.splice(wordArr.indexOf(temp2), 1); //deletes random obj so does not get called again
   }
+  const checkId = (id) => {
+    if (x) {
+      if (id === x) {
+        console.log("Match");
+        console.log(id);
+        console.log(x);
+        newList.pop();
+        console.log(newList);
+      } else {
+        console.log("no match");
+      }
+      x = null;
+    } else {
+      x = id;
+    }
+  };
 
   return (
     <div>
