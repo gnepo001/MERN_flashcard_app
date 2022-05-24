@@ -1,65 +1,98 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect, useState, useRef } from "react";
 import { useSelector } from "react-redux";
 import { Grid, Button } from "@mui/material";
 
 import { SimpleCard } from "../index.js";
 import useStyles from "./styles";
+import "./styles.css";
 
 const Match = () => {
   const classes = useStyles();
   const items = useSelector((state) => state.posts);
 
-  let x = null;
-  const wordArr = [];
-  const randomArr = [];
-  const newList = [];
+  const [selected, setSelected] = useState(null);
+  const [randomArr, setRandomArr] = useState([]);
+  const newList = useRef([]);
 
-  //need to split up items objs to two seprate arrs in order
-  //to randomize defs for the matching game
-  for (let i = 0; i < items.length; i++) {
-    newList.push(items[i]);
-    wordArr.push({ _id: items[i]._id, definition: items[i].definition });
-  }
-  for (let i = 0; i < items.length; i++) {
-    let temp2 = wordArr[Math.floor(Math.random() * wordArr.length)]; //gets random obj
+  const shuffleArray = (array) => {
+    let _array = [...array];
+    for (let i = _array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [_array[i], _array[j]] = [_array[j], _array[i]];
+    }
+    return _array;
+  };
 
-    randomArr.push({ _id: temp2._id, definition: temp2.definition });
-    wordArr.splice(wordArr.indexOf(temp2), 1); //deletes random obj so does not get called again
-  }
-  const checkId = (id) => {
-    if (x) {
-      if (id === x) {
-        console.log("Match");
-        console.log(id);
-        console.log(x);
-        newList.pop();
-        console.log(newList);
+  useEffect(() => {
+    const _newList = items.map((item) => ({ ...item, matched: false }));
+    newList.current = _newList;
+    setRandomArr(shuffleArray(_newList.keys()));
+  }, [items]);
+
+  const checkId = (item, type) => {
+    console.log({ selected, item });
+    if (selected) {
+      if (item._id === selected._id && selected.type !== type) {
+        item.matched = true;
       } else {
         console.log("no match");
       }
-      x = null;
+      setSelected(null);
+      console.log("reset");
     } else {
-      x = id;
+      setSelected({ _id: item._id, type });
+      console.log("set X");
     }
   };
 
   return (
     <div>
       <Grid container spacing={2}>
-        {items.map((ar, i) => (
-          <Fragment key={`word${ar._id}`}>
-            <Grid item xs={6}>
-              <Button fullWidth onClick={() => checkId(ar._id)}>
-                <SimpleCard item={items[i].word}></SimpleCard>
-              </Button>
-            </Grid>
-            <Grid item xs={6}>
-              <Button fullWidth onClick={() => checkId(randomArr[i]._id)}>
-                <SimpleCard item={randomArr[i].definition}></SimpleCard>
-              </Button>
-            </Grid>
-          </Fragment>
-        ))}
+        {!!randomArr.length &&
+          newList.current.map((item, i, random) => {
+            // retrieve the next random index from randomArr
+            const index = randomArr[i];
+            return (
+              <Fragment key={`word${item._id}`}>
+                <Grid item xs={6}>
+                  <Button
+                    fullWidth
+                    // conditional onClick using an && short-circuit
+                    {...(!item.matched && {
+                      onClick: () => checkId(item, "word"),
+                    })}
+                    // styling based on 'matched' and 'selected'
+                    className={`${item.matched && "matched"} ${
+                      selected?.type === "word" &&
+                      selected?._id === item._id &&
+                      "selected"
+                    }`}
+                  >
+                    {/*<SimpleCard item={item.word}></SimpleCard>*/}
+                    {item.word}
+                  </Button>
+                </Grid>
+                <Grid item xs={6}>
+                  <Button
+                    fullWidth
+                    // conditional onClick using an && short-circuit
+                    {...(!random[index].matched && {
+                      onClick: () => checkId(random[index], "definition"),
+                    })}
+                    // styling based on 'matched' and 'selected'
+                    className={`${random[index].matched && "matched"} ${
+                      selected?.type === "definition" &&
+                      selected?._id === random[index]._id &&
+                      "selected"
+                    }`}
+                  >
+                    {/*<SimpleCard item={random[index].definition}></SimpleCard>*/}
+                    {random[index].definition}
+                  </Button>
+                </Grid>
+              </Fragment>
+            );
+          })}
       </Grid>
     </div>
   );
