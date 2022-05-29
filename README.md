@@ -13,17 +13,21 @@ Deploy a quizlet inspired application with matching games.
 
 <figcaption ><b>Flashcards can be clicked to flip over to definition</b></figcaption>
 
+### Matching Game
+
+![Desktop](./github_images/matching.png)
+
 ## Capablities
 
 - Flippable Cards
 - Responsive Function
+- CRUD
 
 ## Future updates
 
-- matching game
+- ~~matching game~~
 - ~~Flippable function~~
 - ~~responsive function~~
-- Multiple sets
 
 # App Stack
 
