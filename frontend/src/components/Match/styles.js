@@ -7,4 +7,10 @@ export default makeStyles((theme) => ({
   button: {
     backgroundColor: "red",
   },
+  matched: {
+    color: "#00e676",
+  },
+  selected: {
+    color: "#ffe082",
+  },
 }));

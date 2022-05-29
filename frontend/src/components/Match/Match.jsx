@@ -50,18 +50,15 @@ const Match = () => {
       <Grid container spacing={2}>
         {!!randomArr.length &&
           newList.current.map((item, i, random) => {
-            // retrieve the next random index from randomArr
             const index = randomArr[i];
             return (
               <Fragment key={`word${item._id}`}>
                 <Grid item xs={6}>
                   <Button
                     fullWidth
-                    // conditional onClick using an && short-circuit
                     {...(!item.matched && {
                       onClick: () => checkId(item, "word"),
                     })}
-                    // styling based on 'matched' and 'selected'
                     className={`${item.matched && "matched"} ${
                       selected?.type === "word" &&
                       selected?._id === item._id &&
@@ -75,11 +72,9 @@ const Match = () => {
                 <Grid item xs={6}>
                   <Button
                     fullWidth
-                    // conditional onClick using an && short-circuit
                     {...(!random[index].matched && {
                       onClick: () => checkId(random[index], "definition"),
                     })}
-                    // styling based on 'matched' and 'selected'
                     className={`${random[index].matched && "matched"} ${
                       selected?.type === "definition" &&
                       selected?._id === random[index]._id &&
